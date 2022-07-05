@@ -1,0 +1,17 @@
+<진도나가는 순서>
+1. HTML, CSS,JAVASCRIPT
+2. ORACLE, DATA BASE
+3. JAVA
+4. JSP
+5. SPRING FRAMEWORK
+6. VUE
+마지막 2주는 프로젝트~ ~ ~
+
+GIT?이란,,
+오늘부터 시작(7월 1일,,)
+
+명령 프롬포트 사용
+폴더 이동 cd 주소
+폴더 내용 확인 DIR
+상위폴더로 이동 cd..
+폴더 만들기 mkdir 폴더명

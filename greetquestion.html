@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>greetquestion</title>
+    <style>
+        div{
+            text-align:center;
+        }
+        h1{
+            color:darksalmon;
+            background-color:rgb(140, 220, 240);
+            font-size: 2cm;
+        }
+        img{
+            height:300px;
+        }
+        ol{
+            list-style-type:lower-latin;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h1>안녕하세요, 
+            <br>
+            저는 토끼입니다!</h1>
+        <img src="images/images/rabbit2.png" art="토끼의 사진" onmouseover="greet();">
+        <button onclick="greet();">토끼에게 인사하기</button>
+        <script>
+            alert("토끼입니당");
+            function greet(){
+                alert("안녕하세요!");
+            }
+        </script>
+    </div>
+    <div>
+        <h2>이번 주에 제가 할 일은요..!</h2>
+        <ol>
+            <li><a href="hello.html"><b>html</b> 공부하기</li></a>
+            <li><b>css</b> 공부하기</li>
+            <li><b>javascript</b> 공부하기</li>
+        </ol>
+        <br>
+        <button onclick="greet2();">클릭 클릭</button>
+        <script>
+            function greet2(){
+                alert("쮸꺄쮸꺄")
+            }
+            <!--greet 소환 함수 두 개일 경우 이름 다르게~!-->
+        </script>
+    </div>
+</body>
+</html>

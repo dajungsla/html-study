@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Step10_anchor2.html</title>
+    <style>
+        /*
+        특정 div를 가운데 정렬하는 법
+        1. width를 결정한다.
+        2. 좌우 마진을 auto로 설정하면 좌우 마진이 같게 설정되어 가운데 정렬 된다.
+        또는 text-align:center;
+        */
+        .container{/*클래스 선택자(.class이름)*/
+            width:768px;
+            margin-left:auto;
+            margin-right:auto;
+        }
+        .spacer{
+            height: 500px;
+            background-color:antiquewhite;
+        }
+    </style>
+</head>
+<body>
+    <!--
+        **visual studio code의 마크업을 편하게 하는 emmet기능**
+        div.container에 tab을 누르면 바로 class속성이 만들어 짐.
+        div.#one에 tab을 누르면 id속성이 자동 부여
+        div.container#one에 tab을 누르면 class속성과 id속성이 자동 부여
+        div.container{hello}에 enter을 누르면 hello가 innertext로 자동 입력
+        div*5에 tab을 누르면 다섯 개의 div가 만들어짐
+        div{div$}*5에 tab을 누르면 innertext로 순차적인 숫자가 자동 입력
+        ul>li에 tab을 누르면 자동으로 자식 요소가 있는 ul이 만들어짐.
+        a에 tab을 누르면 자동으로 하이퍼링크 입력하는 형식 만들어짐.-->
+        
+    <div class="container"></div>
+    <div id="one"></div>
+    <div class="container" id="one"></div>
+    <div class="container">hello</div>
+    <div>div1</div>
+    <div>div2</div>
+    <div>div3</div>
+    <div>div4</div>
+    <div>div5</div>
+    <ul>
+        <li></li>
+    </ul>
+    <a href=""></a>
+    <!--**이제부터 책갈피 anchor적용**-->
+    <div class="container">
+        <h1>동일한 페이지 내에서의 이동(책갈피)</h1>
+        <ul>
+            <li><a href="#one">one</a></li>
+            <li><a href="#two">two</a></li>
+            <li><a href="#three">three</a></li>
+            <li><a href="#four">four</a></li>
+            <!--a href에서 아이디를 가르키기 위해서 다른 클래스의 #id명 사용 가능-->
+        </ul>
+        <div class="spacer" id="one"></div>
+        <p>1 Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos nihil ex ab aliquam id saepe magnam? Error assumenda est numquam veritatis impedit labore ipsum cumque. Placeat, exercitationem. Sunt, illum similique!</p>
+        <!--Lorem적고 tab을 누르면 랜덤한 라틴문장이 나옴-->
+        <div class="spacer" id="two"></div>
+        <p>2 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum ipsam sapiente expedita aut, tempora officiis sit quaerat fuga qui nostrum itaque, nobis voluptatum quia non eligendi! Et modi rerum consequatur?</p>
+        <div class="spacer" id="three"></div>
+        <p>3 Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos nihil ex ab aliquam id saepe magnam? Error assumenda est numquam veritatis impedit labore ipsum cumque. Placeat, exercitationem. Sunt, illum similique!</p>
+        <div class="spacer" id="four"></div>
+        <p>4 Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos nihil ex ab aliquam id saepe magnam? Error assumenda est numquam veritatis impedit labore ipsum cumque. Placeat, exercitationem. Sunt, illum similique!</p>
+        
+    </div>
+</body>
+</html>

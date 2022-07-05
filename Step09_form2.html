@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Step09_form2.html</title>
+    <style>
+        #comment{
+            height: 200px;
+            width:500px;
+        }
+    </style>
+</head>
+<body>
+    <!--fieldset , legend 요소가 왜 필요한지와
+        label 텍스트를 제공하는 새로운 방법을 익히세요-->
+    <h1>회원 가입 폼 입니다.</h1>
+    <form action="signup.jsp">
+        <label for="email">이메일</label>
+        <input type="text" id="email" name="email"><br>
+        <fieldset>
+            <legend>성별 정보 선택</legend>
+            <label>
+                <input type="radio" name="gender" value="man" checked>남자
+                <!--
+                    checked 속성은 로딩시점에 디폴트로 기본값을 선택해 줌
+                    input type="radio" 에서 name속성이 같으면 같은 그룹으로 묶임.
+                    라벨 두 개의 name속성의 값이 같으면 둘 중 하나만 선택하게 하는 그룹이 됨.
+                    value속성을 다르게 넣어줘야 전송되는 값이 구분 됩니다요
+                    value속성의 값은 개발자가 알아볼 수 있는 값으로만 작성하면 됩니다.
+                -->
+            </label>
+            <label>
+                <input type="radio" name="gender" value="woman">여자
+            </label>
+        </fieldset>
+        <fieldset>
+            <legend>취미 정보 선택</legend>
+            <!--input type을 checkbox 속성을 해두면, name이 hobby라서 같은 그룹으로 묶이지만 중복 선택이 가능-->
+            <label>
+                <input type="checkbox" name="hobby" value="soccer">축구</label>
+            <label>
+                <input type="checkbox" name="hobby" value="baking">베이킹</label>
+            <label>
+                <input type="checkbox" name="hobby" value="piano">피아노</label>
+            <label>
+                <input type="checkbox" name="hobby" value="etc">기타</label>
+        </fieldset>
+<br>
+        <label for="job">직업 선택</label>
+        <!--**id 속성은 label for의 문자열과 동일하게 작성이 되어야 한다**-->
+        <select name="job" id="job">
+            <option value="">선택</option>
+            <option value="programmer">프로그래머</option>
+            <option value="doctor">의사</option>
+            <option value="pianist">피아니스트</option>
+            <option value="etc">기타</option>
+        </select>  
+<br>  
+        <label for="lunch">점심 선택</label>
+        <!--option에 value가 없으면 innerText(요소 사이에 출력될 텍스트, ex:라면,쫄면,김밥 등)가 전송된다-->
+        <select name="lunch" id="lunch">
+            <!--optgroup label=""은 옵션에 카테고리를 만들고 싶을 때 사용-->
+            <optgroup label="분식">
+                <option>라면</option>
+                <option>쫄면</option>
+                <option>김밥</option>
+            </optgroup>
+            <optgroup label="중식">
+                <option>자장면</option>
+                <option>짬뽕</option>
+                <option>군만두</option>
+            </optgroup>
+        </select>
+<br>
+        <label for="myFile">첨부파일</label>
+        <input type="file" id="myFile" name="myFile">
+<br>
+        <label for="comment">하고 싶은 말</label>
+        <br>
+        <textarea name="comment" id="comment" cols="30" rows="10"></textarea>
+        <!--cols와rows 값을 빼면 기본 크기가 됨, 그냥 css에서 디자인 수정하기~-->
+<br>
+        <button type="submit">가입</button>
+    </form>
+</body>
+</html>
